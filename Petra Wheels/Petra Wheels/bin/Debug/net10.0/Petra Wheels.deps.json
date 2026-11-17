@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Petra Wheels/1.0.0": {
+        "runtime": {
+          "Petra Wheels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Petra Wheels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
