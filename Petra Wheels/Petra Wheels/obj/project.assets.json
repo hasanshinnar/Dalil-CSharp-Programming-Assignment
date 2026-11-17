@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\PC\\Documents\\Projects\\Dalil-CSharp-Programming-Assignment\\Petra Wheels\\Petra Wheels\\Petra Wheels.csproj",
+      "projectUniqueName": "C:\\Users\\PC\\Documents\\Projects\\Dalil-Petra-Wheels-Task\\Petra Wheels\\Petra Wheels\\Petra Wheels.csproj",
       "projectName": "Petra Wheels",
-      "projectPath": "C:\\Users\\PC\\Documents\\Projects\\Dalil-CSharp-Programming-Assignment\\Petra Wheels\\Petra Wheels\\Petra Wheels.csproj",
+      "projectPath": "C:\\Users\\PC\\Documents\\Projects\\Dalil-Petra-Wheels-Task\\Petra Wheels\\Petra Wheels\\Petra Wheels.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\PC\\Documents\\Projects\\Dalil-CSharp-Programming-Assignment\\Petra Wheels\\Petra Wheels\\obj\\",
+      "outputPath": "C:\\Users\\PC\\Documents\\Projects\\Dalil-Petra-Wheels-Task\\Petra Wheels\\Petra Wheels\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
