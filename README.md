@@ -1,5 +1,5 @@
-<p align="center">
-<img width="686" height="314" alt="trustid_logo_hor_light" src="https://github.com/user-attachments/assets/f5133776-5e12-463c-b06b-10d4ef5dda5f" />
+<p align="left">
+<img width="160" height="220" alt="trustid_logo_hor_light" src="https://github.com/user-attachments/assets/f5133776-5e12-463c-b06b-10d4ef5dda5f" />
 </p>
 
 # Petra Wheels – Car Rental System
