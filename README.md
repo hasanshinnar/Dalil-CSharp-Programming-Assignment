@@ -119,8 +119,7 @@ The project applies several fundamental OOP principles:
 - The application is designed as a console-based learning project.
 
 
-Developed as part of a C# Programming Assignment for ([Dalil Information Technology]([https://www.linkedin.com/company/tek-community/](https://www.linkedin.com/company/dalil-information-technology-jo)).
-
+Developed as part of a C# Programming Assignment for [Dalil Information Technology](https://www.linkedin.com/company/dalil-information-technology-jo).
 
 <img width="1128" height="191" alt="image" src="https://github.com/user-attachments/assets/0e1b05a0-3036-422a-9669-48575e4fb930" />
 
