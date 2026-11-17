@@ -1,104 +1,90 @@
+
 using System;
-using System.Collections.Generic;
 using PetraWheels;
 
 class Program
 {
     static void Main(string[] args)
     {
-        List<Vehicle> vehicles = new List<Vehicle>();
-
-        Car initialCar = new Car(1, "AB-123", "Toyota", 30m, 5);
-        Motorcycle initialBike = new Motorcycle(2, "XY-456", "Honda", 15m, 250);
-
-        vehicles.Add(initialCar);
-        vehicles.Add(initialBike);
-
-        Console.WriteLine("Choose vehicle type:");
-        Console.WriteLine("1. Car");
-        Console.WriteLine("2. Motorcycle");
-        Console.Write("Your choice: ");
-
-        string choice = Console.ReadLine();
-        int newId = vehicles.Count + 1;
-
-        if (choice == "1")
+        if (!LoginManager.Login())
         {
-            Console.Write("Enter car plate: ");
-            string plate = Console.ReadLine();
-
-            bool plateExists = false;
-
-            foreach (Vehicle vehicle in vehicles)
-            {
-                if (vehicle.Plate == plate)
-                {
-                    plateExists = true;
-                    break;
-                }
-            }
-
-            if (plateExists)
-            {
-                Console.WriteLine("This plate already exists!");
-            }
-            else
-            {
-                Console.Write("Enter car model: ");
-                string model = Console.ReadLine();
-
-                Console.Write("Enter car daily rate: ");
-                decimal dailyRate = decimal.Parse(Console.ReadLine());
-
-                Console.Write("Enter car seating capacity: ");
-                int seats = int.Parse(Console.ReadLine());
-
-                Car newCar = new Car(newId, plate, model, dailyRate, seats);
-                vehicles.Add(newCar);
-
-                Console.WriteLine("Car added successfully!");
-            }
+            return;
         }
-        else if (choice == "2")
+
+        VehicleManager manager = new VehicleManager();
+
+        Car car = new Car(
+            manager.GenerateId(),
+            "AB-123",
+            "Toyota",
+            30m,
+            5
+        );
+
+        Motorcycle bike = new Motorcycle(
+            manager.GenerateId(),
+            "XY-456",
+            "Honda",
+            15m,
+            250
+        );
+        Car secondCar = new Car(
+          manager.GenerateId(),
+          "CD-789",
+         "Hyundai",
+         25m,
+          4
+         );
+
+        manager.AddVehicle(car);
+        manager.AddVehicle(bike);
+        manager.AddVehicle(secondCar);
+        bool running = true;
+
+        while (running)
         {
-            Console.Write("Enter motorcycle plate: ");
-            string plate = Console.ReadLine();
+            Console.WriteLine("\n===== PETRA WHEELS =====");
+            Console.WriteLine("1. Add Vehicle");
+            Console.WriteLine("2. Show Vehicles");
+            Console.WriteLine("3. Rent Vehicle");
+            Console.WriteLine("4. Return Vehicle");
+            Console.WriteLine("5. Reports");
+            Console.WriteLine("6. Exit");
 
-            bool plateExists = false;
+            Console.Write("Choose an option: ");
+            string choice = Console.ReadLine();
 
-            foreach (Vehicle vehicle in vehicles)
+            switch (choice)
             {
-                if (vehicle.Plate == plate)
-                {
-                    plateExists = true;
+                case "1":
+                    VehicleInput.AddVehicle(manager);
                     break;
-                }
+
+                case "2":
+                    manager.ShowAllVehicles();
+                    break;
+
+                case "3":
+                    RentalInput.RentVehicle(manager);
+                    break;
+
+                case "4":
+                    ReturnInput.ReturnVehicle(manager);
+                    break;
+
+                case "5":
+                    ReportManager.ShowReports(manager);
+                    break;
+
+                case "6":
+                    running = false;
+                    Console.WriteLine("Thank you for using Petra Wheels!");
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice. Please choose from 1 to 6.");
+                    break;
             }
-
-            if (plateExists)
-            {
-                Console.WriteLine("This plate already exists!");
-            }
-            else
-            {
-                Console.Write("Enter motorcycle model: ");
-                string model = Console.ReadLine();
-
-                Console.Write("Enter motorcycle daily rate: ");
-                decimal dailyRate = decimal.Parse(Console.ReadLine());
-
-                Console.Write("Enter motorcycle engine capacity (cc): ");
-                int engineCapacity = int.Parse(Console.ReadLine());
-
-                Motorcycle newBike = new Motorcycle(newId, plate, model, dailyRate, engineCapacity);
-                vehicles.Add(newBike);
-
-                Console.WriteLine("Motorcycle added successfully!");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Invalid choice.");
         }
     }
 }

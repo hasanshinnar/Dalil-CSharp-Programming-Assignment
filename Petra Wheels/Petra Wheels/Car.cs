@@ -13,9 +13,12 @@ namespace PetraWheels
 
         public override void ShowInfo()
         {
+            
             Console.WriteLine($"Model: {Model}");
             Console.WriteLine($"Plate: {Plate}");
             Console.WriteLine($"Seats: {Seats}");
+            Console.WriteLine($"Daily Rate: {DailyRate} JD");
+            Console.WriteLine($"Status: {Status}");
         }
     }
 }

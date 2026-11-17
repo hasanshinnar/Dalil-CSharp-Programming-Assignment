@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Petra Wheels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1b26910c470a557b8f7aac79f3cb46aeb12ee99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+381007f88b53e120f3160ac325736eccfeffcab2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Petra Wheels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Petra Wheels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections.Generic;
 
 namespace PetraWheels
@@ -6,6 +6,13 @@ namespace PetraWheels
     public class VehicleManager
     {
         private List<Vehicle> vehicles = new List<Vehicle>();
+
+        private int nextId = 1;
+
+        public int GenerateId()
+        {
+            return nextId++;
+        }
 
         public void AddVehicle(Vehicle vehicle)
         {
@@ -24,5 +31,18 @@ namespace PetraWheels
 
             return null;
         }
+        public void ShowAllVehicles()
+        {
+            foreach (Vehicle vehicle in vehicles)
+            {
+                vehicle.ShowInfo();
+                Console.WriteLine("----------------");
+            }
+        }
+        public List<Vehicle> GetAllVehicles()
+        {
+            return vehicles;
+        }
+
     }
 }
